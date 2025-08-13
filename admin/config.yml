@@ -1,0 +1,32 @@
+backend:
+  name: git-gateway
+  branch: main # Branch to update (optional; defaults to master)
+
+media_folder: "images/uploads" # Media files will be stored in the repo under images/uploads
+public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
+
+collections:
+  - name: "notices"
+    label: "Notices"
+    description: "School notices and announcements"
+    folder: "/" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    format: "json"
+    extension: "json"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.json
+    editor:
+      preview: false
+    files:
+      - file: "notices.json"
+        name: "notices"
+        label: "School Notices"
+        fields:
+          - label: "Notices"
+            name: "notices"
+            widget: "list"
+            allow_add: true
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Date", name: "date", widget: "date", format: "YYYY-MM-DD" }
+              - { label: "PDF Link", name: "pdfLink", widget: "string", hint: "Paste the Google Drive public share link here" }

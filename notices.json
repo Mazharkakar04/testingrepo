@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Annual Examination Schedule 2024",
+    "description": "The annual examination schedule for the academic year 2024 has been finalized. All students are requested to check their respective class schedules and prepare accordingly. The examinations will commence from January 15th, 2024.",
+    "date": "2023-12-15",
+    "pdfLink": "https://drive.google.com/file/d/example1/view"
+  },
+  {
+    "title": "Annual Sports Day Celebration",
+    "description": "We are pleased to announce our Annual Sports Day celebration on January 25th, 2024. The event will feature various sports competitions, cultural performances, and award ceremonies. All students and parents are cordially invited to attend.",
+    "date": "2023-12-20",
+    "pdfLink": "https://drive.google.com/file/d/example2/view"
+  },
+  {
+    "title": "Winter Vacation Announcement",
+    "description": "The school will remain closed for winter vacation from December 28th, 2023 to January 5th, 2024. Classes will resume on January 6th, 2024. We wish all students and staff a happy and safe winter break.",
+    "date": "2023-12-25",
+    "pdfLink": "https://drive.google.com/file/d/example3/view"
+  }
+]

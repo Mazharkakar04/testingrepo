@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notice Board - Iqra Public High School</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="images/iqra_logo.png" alt="Iqra Public High School Logo" class="school-logo">
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="facilities.html" class="nav-link">Facilities</a>
+                </li>
+                <li class="nav-item">
+                    <a href="achievements.html" class="nav-link">Achievements</a>
+                </li>
+                <li class="nav-item">
+                    <a href="notice.html" class="nav-link active">Notice</a>
+                </li>
+                <li class="nav-item">
+                    <a href="campus.html" class="nav-link">Campus</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Notice Board</h1>
+            <p>Stay updated with the latest announcements, events, and important information</p>
+        </div>
+    </section>
+
+    <!-- Notice Board Introduction -->
+    <section class="notice-intro">
+        <div class="container">
+            <div class="intro-content">
+                <h2>Important Announcements</h2>
+                <p>Welcome to our digital notice board. Here you'll find all the latest announcements, upcoming events,
+                    academic schedules, and important information for students, parents, and staff. Please check
+                    regularly for updates.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Notice Board -->
+    <section class="notice-board">
+        <div class="container">
+            <div class="notice-filters">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All Notices</button>
+                    <button class="filter-btn" data-filter="academic">Academic</button>
+                    <button class="filter-btn" data-filter="events">Events</button>
+                    <button class="filter-btn" data-filter="general">General</button>
+                </div>
+            </div>
+
+            <div class="notices-container" id="notices">
+                <!-- Notices will be dynamically loaded here -->
+            </div>
+
+            <div class="load-more-section">
+                <button class="btn btn-primary load-more-btn">
+                    <i class="fas fa-plus"></i> Load More Notices
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Notice Categories Info -->
+
+    <!-- Call to Action -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Stay Connected</h2>
+                <p>Receive the latest notices and updates</p>
+                <a href="contact.html" class="btn btn-primary">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Iqra Public High School</h3>
+                    <p>This is where character is shaped.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="facilities.html">Facilities</a></li>
+                        <li><a href="achievements.html">Achievements</a></li>
+                        <li><a href="notice.html">Notice Board</a></li>
+                        <li><a href="campus.html">Campus Life</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> Mohadi Shivar, Jalgaon, (MH)</p>
+                        <p><i class="fas fa-phone"></i> +919960487622</p>
+                        <p><i class="fas fa-envelope"></i> info@iqraschool.edu</p>
+                        <p><i class="fas fa-clock"></i> Mon-Saturday: 11:00 AM - 4:00 PM</p>
+                    </div>
+                </div>
+
+                <!-- <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe to our newsletter for updates and news.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div> -->
+
+                <div class="footer-bottom">
+                    <p>&copy; 2025 Iqra Public High School. All rights reserved.</p>
+                </div>
+            </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        if (window.netlifyIdentity) {
+            window.netlifyIdentity.on("init", user => {
+                if (!user) {
+                    window.netlifyIdentity.on("login", () => {
+                        document.location.href = "/admin/";
+                    });
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
